@@ -772,9 +772,14 @@ text-align: center;
 }
 
 .modal-form-input {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     position: relative;
+    
+}
+
+.modal-form-input:not(:first-child) {
+    margin-top: 8px;
 }
 
 .modal-label {
@@ -845,40 +850,42 @@ fill: var(--accent-color);
 }
 
 .label-policy {
-font-weight: 400;
+    font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: #757575;
-    
+    display: flex;
 }
 
 .modal-accent-text {
     color: var(--accent-color);
     text-decoration: underline;
+    margin-left: 4px;
 }
 
 .policy-checkbox {
 appearance: none;
 }
 
-.policy-checkbox:checked + .modal-policy-icon {
+.policy-checkbox:checked + .label-policy::before {
     background-image: url(../images/click.svg);
     background-size: contain;
     background-origin: border-box;
     background-color: var(--hover-color);
-    border-color: var(--hover-color);
+    border: none;
 }
 
-.modal-policy-icon {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    border: 1.25px solid #2E2F42;
-    border-radius: 2px;
-    left: 0;
-    transition: background-image 250ms var(--timing-function);
+.label-policy::before {
+    content: "";
+    margin-right: 8px;
+        width: 16px;
+        height: 16px;
+        border: 1.25px solid #2E2F42;
+        border-radius: 2px;
+        transition: background-image 250ms var(--timing-function);
 }
+
 
 .modal-form-btn {
 font-family: 'Roboto', sans-serif;
