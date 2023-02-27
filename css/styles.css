@@ -138,7 +138,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     background: rgba(46, 47, 66, 0.7);
-    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 0%),
+    background-image: linear-gradient(90deg, rgba(46, 47, 66, 0.7) 0%, rgba(46, 47, 66, 0.7) 0%),
         url("../images/people-office-1.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -428,7 +428,7 @@ body {
 .footer-info {
     display: flex;
     align-items: flex-start;
-    gap: 120px;
+    justify-content: space-between;
 }
 
 .white-logo {
@@ -490,7 +490,7 @@ body {
 .soc-media-icon {}
 
 .subscribe-form {
-    margin-left: auto;
+    
 
 }
 
@@ -509,7 +509,7 @@ body {
 
 .form-input-wrap input {
     margin: 0;
-    /* width: 264px; */
+    width: 264px;
     height: 40px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -520,7 +520,7 @@ body {
 }
 
 .form-input-wrap input::placeholder {
-font-size: 12px;
+    font-size: 12px;
     line-height: 2.0;
     letter-spacing: 0.04em;
     color: rgba(255, 255, 255, 0.6);
@@ -781,20 +781,21 @@ text-align: center;
 .modal-form-input:not(:first-child) {
     margin-top: 8px;
 }
+.modal-form-textarea {
+    margin-top: 4px;
+}
 
 .modal-label {
     font-weight: 400;
-        font-size: 12px;
-        line-height: 1.17;
-        letter-spacing: 0.04em;
-        color: #8E8F99;
-        margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8E8F99;
+    /* margin-bottom: 4px; */
 }
 
 .modal-input-frame {
-    /* background: #FCFCFC;
-    border-radius: 4px;
-    outline: none; */
+    margin-top: 4px;
     transition: border-color 250ms var(--timing-function);
 }
 
@@ -805,6 +806,7 @@ text-align: center;
     width: 360px;
     height: 40px;
     padding-left: 38px;
+    background-color: #FCFCFC;
 }
 
 .modal-form-input textarea {
@@ -815,6 +817,8 @@ text-align: center;
     padding-top: 8px;
     padding-left: 16px;
     transition: border-color 250ms var(--timing-function);
+    background-color: #FCFCFC;
+    resize: none;
 }
 
 .modal-form-input textarea::placeholder {
@@ -847,6 +851,8 @@ fill: var(--accent-color);
 .modal-form-policy {
     margin-top: 16px;
     margin-bottom: 24px;
+    padding: 0;
+    display: flex;
 }
 
 .label-policy {
@@ -855,7 +861,9 @@ fill: var(--accent-color);
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: #757575;
-    display: flex;
+    /* display: flex; */
+    /* margin-top: 16px;
+    margin-bottom: 24px; */
 }
 
 .modal-accent-text {
@@ -879,11 +887,12 @@ appearance: none;
 .label-policy::before {
     content: "";
     margin-right: 8px;
-        width: 16px;
-        height: 16px;
-        border: 1.25px solid #2E2F42;
-        border-radius: 2px;
-        transition: background-image 250ms var(--timing-function);
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 1.25px solid #2E2F42;
+    border-radius: 2px;
+    transition: background-image 250ms var(--timing-function);
 }
 
 
