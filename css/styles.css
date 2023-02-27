@@ -833,7 +833,7 @@ text-align: center;
 position: absolute;
 top: 50%;
 left: 16px;
-transform: translateY(-10%);
+/* transform: translateY(-10%); */
 transition: fill 250ms var(--timing-function);
 }
 
@@ -861,7 +861,7 @@ fill: var(--accent-color);
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: #757575;
-    /* display: flex; */
+    display: flex;
     /* margin-top: 16px;
     margin-bottom: 24px; */
 }
